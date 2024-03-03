@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/wave-haikei.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box {
+    width: 400px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 5px #89c9f3, -2px -2px 5px #89c9f3;
+    border-radius: 10px;
+    padding: 20px 40px;
+    backdrop-filter: blur(8px);
+}
+
+.signup h1 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.signupBody p {
+    margin-top: 20px;
+    position: relative;
+}
+
+.signupBody p i {
+    position: absolute;
+    top: 40px;
+    right: 12px;
+    color: #ef4545;
+    font-size: 25px;
+}
+
+.signupBody p span {
+    font-size: 13px;
+    color: #ef4545;
+}
+
+.signupBody p label {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.signupBody p input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-block: 4px;
+    border: none;
+    outline: none;
+    color: #000;
+}
+
+.signupBody p input[type="submit"] {
+    border: none;
+    background-color: #0086e0;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.signupBody p input[type="submit"]:hover {
+    background-color: #013456;
+}
+
+.signupFooter p {
+    text-align: center;
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+.signupFooter p a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signupFooter p a:hover {
+    text-decoration: underline;
+}

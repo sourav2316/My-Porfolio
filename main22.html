@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* Your existing CSS styles */
+      .header {
+        background-color: #333;
+        padding: 15px;
+        text-align: center;
+        color: white;
+        position: relative;
+      }
+
+      .logo {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        display: none; /* Initially hide the navbar */
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: white;
+        margin: 0 15px;
+        font-size: 18px;
+      }
+
+      #menuIcon {
+        font-size: 24px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">SouravWorld</a>
+
+      <i class="fas fa-bars" id="menuIcon" onclick="toggleNavbar()"></i>
+
+      <nav class="navbar" id="navbar">
+        <a href="#home" id="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <script>
+      function toggleNavbar() {
+        var navbar = document.getElementById("navbar");
+        navbar.style.display =
+          navbar.style.display === "none" || navbar.style.display === ""
+            ? "flex"
+            : "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.container{
+    display: flex;
+}
+
+.sidebar{
+    height: 100vh;
+    width: 70px;
+}
+
+.sidefull{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.home img , 
+.compass img,
+.subscr img,
+.libr img{
+   width: 30px;
+}
+ 
+.home h6, 
+.compass h6,
+.subscr h6,
+.libr h6{
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.mainhead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.logo img{
+    width: 150px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.centernav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.search{
+    display: flex;
+}
+
+.search input{
+    min-width: 400px;
+    padding: 5px 10px;
+    border: 0.5px solid #ccc;
+}
+
+.search button{
+    border: none;
+    padding: 5px 10px;
+}
+
+.mic{
+    padding: 15px;
+    border-radius: 50%;
+    background: #f0efef;
+    display: grid;
+    place-items: center;
+}
+
+.mic img{
+    width: 20px;
+}
+
+.sidenav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-right: 10px;
+}
+
+.tags{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+.tag{
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.dark{
+    background-color: #222;
+    color: #fff;
+}
+
+.orcont{
+    width: 100%;
+}
+
+main{
+    min-height: 100vh;
+    background: rgb(240, 238, 238);
+    padding: 10px;
+}
+
+.cardcont{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.card{
+    padding: 5px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.avatarcont{
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.text h3{
+    font-size: 15px;
+    font-weight: bold;
+}
+.cn{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.textstat{
+    display: flex;
+    gap: 5px;
+    font-size: 10px;
+}

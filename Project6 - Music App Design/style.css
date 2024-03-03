@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    line-height: 1.4;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav{
+    background-color: rgb(54, 2, 103);
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.3);
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.logotext{
+    color: white;
+}
+
+.sidetext ul{
+   display: flex;
+   gap: 20px;
+   list-style: none;
+}
+
+.sidetext a:hover{
+    text-decoration: underline 1px solid white;
+}
+
+.sidetext ul a{
+    text-decoration: none;
+    color: white;
+}
+
+.overview{
+    text-align: center;
+}
+
+.maincont{
+    background-image: url(Images/hero_image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    padding: 200px;
+}
+
+.maincont h2{
+    font-size: 60px;
+}
+
+.maincont h3{
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 20px;
+}
+
+.maincont p{
+    font-size: 13px;
+    line-height: 1.4;
+    padding-top: 5px;
+}
+
+.music1{
+    background-color: #281154;
+    background-size: cover;
+}
+
+.musiccont{
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.musiccont h3{
+    font-size: 17px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.musiccont h4{
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.trial{
+    background-color: #dc0000;
+    color: white;
+    box-shadow: 2px solid black;
+    padding: 10px;
+    font-weight: 300;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.trial:hover{
+    background-color: azure;
+    color: black;
+    transition: 0.1s ease-out;
+}
+
+.nic{
+    padding-top: 40px;
+    font-size: 8px;
+    font-weight: 100;
+}
+
+.music2{
+    background-color: #281154;
+    background-size: cover;
+    max-height: 350px;
+}
+
+.ipadimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textcont2{
+    text-align: center;
+}
+
+.textcont2 h2{
+    padding-top: 60px;
+    font-weight: 300;
+    padding-bottom: 30px;
+}
+
+.textcont2 p{
+    font-size: 13px;
+    line-height: 1.4;
+    padding-bottom: 50px;
+}
+
+.rm{
+    background-color: #281154;
+    color: white;
+    box-shadow: 2px solid black;
+    padding: 10px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.rm:hover{
+    background-color: azure;
+    color: black;
+    transition: 0.1s ease-out;
+}
+
+.macimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+.videosec{
+    background-image: url(Images/video.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    padding: 200px;
+}
+
+.videotxt{
+    text-align: center;
+}
+
+.videotxt h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+
+.videotxt p{
+    font-size: 13px;
+    line-height: 1.4;
+    padding-top: 30px;
+}
+
+.giftcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    padding: 50px;
+}
+
+.giftcardimg img{
+   width: 300px;
+}
+
+.giftcardcont{
+    padding-left: 60px;
+}
+
+.giftcardcont h2{
+    padding-bottom: 20px;
+}
+
+.giftcardcont p{
+    line-height: 1.4;
+}
+
+.giftcardcont h3{
+    font-size: 15px;
+    padding-top: 25px;
+}
+
+.rd{
+    background-color: #281154;
+    color: white;
+    box-shadow: 2px solid black;
+    padding: 10px 25px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.rd:hover{
+    background-color: azure;
+    color: black;
+    transition: 0.1s ease-out;
+}
+
+footer{
+    background-color: #281154;
+    color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-links h4{
+    padding-bottom: 3px;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px
+}
+
+.footer-links ul{
+    font-size: 13px;
+    list-style: none;
+}
+
+.comp{
+    background-color: #371a6d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
