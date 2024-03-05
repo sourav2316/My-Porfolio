@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Profile Searcher</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: 62.5%;
+}
+
+body{
+    font-size: 16px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.container h1{
+    font-size: 40px;
+}
+ 
+.search input{
+    width: 400px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 0.1px solid black;
+}
+
+.search input:focus{
+    outline: 1px solid purple;
+}
+
+button{
+    margin-left: 2px;
+    background-color: purple;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.1s ease-out;
+}
+
+button:hover{
+    scale: 1.04;
+    transition: 0.1s ease-in;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: 0.1px solid black;
+}
+
+/* Card */
+
+.profilebox{
+    padding: 40px 20px;
+    width: 800px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    transition: 0.5s ease-in;
+}
+
+.profilebox:hover{
+    transform: rotate(-1deg) scale(1.05);
+    transition: 0.5s ease-in;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.avatar img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.self{
+    display: flex;
+    flex-direction: column;
+}
+
+.self h1{
+    font-size: 20px;
+    
+}
+
+.about{
+    margin-top: 10px;
+}
+
+.status{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Search Github Profile</h1>
+        <div class="search">
+            <input type="text"
+            id="inputType"
+            name="inputType"
+            placeholder="Enter Github Profile Username">
+            <button id="searchBtn" class="btn">Search</button>
+        </div>
+        <div id="profileCont"></div>
+        <div id="loading"></div>
+    </div>
+    <script>
+        const url = "https://api.github.com/users";
+const inputEl = document.getElementById("inputType");
+const searchEl = document.getElementById("searchBtn");
+const profileEl = document.getElementById("profileCont");
+const loadingEl = document.getElementById("loading");
+
+const generateProf = (profile) => {
+    return(
+        `
+        <div class="profilebox">
+            <div class="top">
+                <div class="left">
+                    <div class="avatar">
+                        <img src="${profile.avatar_url}" alt="Profile Pic"/>
+                    </div>
+                    <div class="self">
+                        <h1><span>Name : </span>${profile.name}</h1>
+                        <span>Username : ${profile.login}</span>
+                    </div>
+                </div>
+                <a href="${profile.html_url}" target="_blank">
+                <button class="primBtn">Check Profile</button>
+                </a>
+            </div>
+    
+            <div class="about">
+                <h2>About</h2>
+                <p>
+                    ${profile.bio}
+                </p>
+            </div>
+    
+            <div class="status">
+                <div class="statitem">
+                    <h3>Followers</h3>
+                    <p>${profile.followers}</p>
+                </div>
+                <div class="statitem">
+                    <h3>Following</h3>
+                    <p>${profile.following}</p>
+                </div>
+                <div class="statitem">
+                    <h3>Repos</h3>
+                    <p>${profile.public_repos}</p>
+                </div>
+            </div>
+        </div>
+        `
+    )
+};
+
+const fetchProfile = async() => {
+    const username =inputEl.value;
+
+    loadingEl.innerText = "Loading...";
+    loadingEl.style.color = "black";
+
+    try{
+    const res = await fetch(`${url}/${username}`)
+    const data = await res.json();
+
+        if(data.bio){
+            loadingEl.innerText = "";
+            profileEl.innerHTML = generateProf(data);
+        } else{
+            loadingEl.innerHTML = "No profile found";
+            loadingEl.style.color = "red";
+            profileEl.innerHTML = "";
+        }
+    console.log(data);
+    } catch(err){
+        console.log({err});
+        profileEl.innerText = "";
+    }
+};
+
+
+searchEl.addEventListener("click", fetchProfile);
+    </script>
+</body>
+</html>
