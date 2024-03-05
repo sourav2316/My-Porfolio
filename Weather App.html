@@ -134,14 +134,14 @@ body {
             <h2 class="city">Una</h2>
             <div class="details">
                 <div class="col">
-                    <img src="/Project17 - Weather App/humidity.png" alt="humdity">
+                    <img src="Project17 - Weather App/humidity.png" alt="humdity">
                     <div>
                         <p class="humidity">50%</p>
                         <p>Humidity</p>
                     </div>
                 </div>
                 <div class="col">
-                    <img src="/Project17 - Weather App/wind.png" alt="wind">
+                    <img src="Project17 - Weather App/wind.png" alt="wind">
                     <div>
                         <p class="wind">15 km/h</p>
                         <p>Wind Speed</p>
@@ -177,15 +177,15 @@ body {
                 document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
                 if (data.weather[0].main == "Clear") {
-                    weatherIcon.src = "/Project17 - Weather App/clear.png";
+                    weatherIcon.src = "Project17 - Weather App/clear.png";
                 } else if (data.weather[0].main == "Rain") {
-                    weatherIcon.src = "/Project17 - Weather App/rain.png";
+                    weatherIcon.src = "Project17 - Weather App/rain.png";
                 } else if (data.weather[0].main == "Mist") {
-                    weatherIcon.src = "/Project17 - Weather App/mist.png";
+                    weatherIcon.src = "Project17 - Weather App/mist.png";
                 } else if (data.weather[0].main == "Drizzle") {
-                    weatherIcon.src = "/Project17 - Weather App/drizzle.png";
+                    weatherIcon.src = "Project17 - Weather App/drizzle.png";
                 } else if (data.weather[0].main == "Clouds") {
-                    weatherIcon.src = "/Project17 - Weather App/clouds.png";
+                    weatherIcon.src = "Project17 - Weather App/clouds.png";
                 }
 
                 document.querySelector(".weather").style.display = "block";
