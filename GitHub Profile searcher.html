@@ -116,8 +116,7 @@ button:hover{
 }
 
 .self h1{
-    font-size: 20px;
-    
+    font-size: 20px;  
 }
 
 .about{
@@ -129,6 +128,52 @@ button:hover{
     justify-content: space-between;
     margin-top: 10px;
 }
+
+.primBtn{
+    margin-left: 2px;
+    background-color: purple;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.1s ease-out;
+}
+
+.primBtn:hover{
+    scale: 1.04;
+    transition: 0.1s ease-in;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: 0.1px solid black;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .search input {
+        width: 250px;
+    }
+
+    .profilebox{
+    width: 380px;
+    }
+
+    .primBtn{
+        font-size: 10px;
+    }
+
+    .self h1{
+        font-size: 16px;
+    }
+
+    .self span{
+    font-size: 13px;
+    }
+
+}
+
+
     </style>
 </head>
 <body>
@@ -161,8 +206,8 @@ const generateProf = (profile) => {
                         <img src="${profile.avatar_url}" alt="Profile Pic"/>
                     </div>
                     <div class="self">
-                        <h1><span>Name : </span>${profile.name}</h1>
-                        <span>Username : ${profile.login}</span>
+                        <h1>Name:</h1><span>${profile.name}</span>
+                        <h1>Username:</h1><span> ${profile.login}</span>
                     </div>
                 </div>
                 <a href="${profile.html_url}" target="_blank">
