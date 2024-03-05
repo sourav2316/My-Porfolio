@@ -116,6 +116,56 @@ body {
     color: red;
     display: none;
 }
+
+@media screen and (max-width: 768px) {
+    .search input {
+        font-size: 14px;
+    }
+
+    .humidity,
+    .wind {
+    font-size: 14px;
+    margin-top: 15px;
+    }
+
+    .search button{
+        width: 60px;
+        height: 60px;
+    }
+    .search button img{
+        width: 20px;
+    }
+
+    .details{
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 411px){
+    .search {
+        flex-direction: row;
+    }
+
+    .search input {
+        font-size: 12px;
+    }
+
+    .humidity,
+    .wind {
+    font-size: 14px;
+    margin-top: 15px;
+    }
+
+    .search button{
+        width: 60px;
+        height: 60px;
+    }
+    .search button img{
+        width: 20px;
+    }
+}
+
     </style>
 </head>
 
