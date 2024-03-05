@@ -5,32 +5,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #222;
+}
+
+.card {
+    width: 90%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 60px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background: #ebfffc;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: none;
+    outline: none;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    top: 10px;
+}
+
+.search button img {
+    width: 20px;
+}
+
+.weatherIcon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity,
+.wind {
+    font-size: 18px;
+    margin-top: -6px;
+}
+
+
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 14px;
+    margin-top: 10px;
+    color: red;
+    display: none;
+}
+    </style>
 </head>
 
 <body>
     <div class="card">
         <div class="search">
             <input type="text" placeholder="Enter city name" spellcheck="false">
-            <button><img src="images/search.png" alt="search"></button>
+            <button><img src="Project17 - Weather App/search.png" alt="search"></button>
         </div>
         <div class="error">
             <p>Please Enter Valid City Name</p>
         </div>
         <div class="weather">
-            <img src="images/clouds.png" alt="rain" class="weatherIcon">
+            <img src="Project17 - Weather App/clouds.png" alt="rain" class="weatherIcon">
             <h1 class="temp">22°C</h1>
             <h2 class="city">Una</h2>
             <div class="details">
                 <div class="col">
-                    <img src="images/humidity.png" alt="humdity">
+                    <img src="/Project17 - Weather App/humidity.png" alt="humdity">
                     <div>
                         <p class="humidity">50%</p>
                         <p>Humidity</p>
                     </div>
                 </div>
                 <div class="col">
-                    <img src="images/wind.png" alt="wind">
+                    <img src="/Project17 - Weather App/wind.png" alt="wind">
                     <div>
                         <p class="wind">15 km/h</p>
                         <p>Wind Speed</p>
@@ -66,15 +177,15 @@
                 document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
                 if (data.weather[0].main == "Clear") {
-                    weatherIcon.src = "images/clear.png";
+                    weatherIcon.src = "/Project17 - Weather App/clear.png";
                 } else if (data.weather[0].main == "Rain") {
-                    weatherIcon.src = "images/rain.png";
+                    weatherIcon.src = "/Project17 - Weather App/rain.png";
                 } else if (data.weather[0].main == "Mist") {
-                    weatherIcon.src = "images/mist.png";
+                    weatherIcon.src = "/Project17 - Weather App/mist.png";
                 } else if (data.weather[0].main == "Drizzle") {
-                    weatherIcon.src = "images/drizzle.png";
+                    weatherIcon.src = "/Project17 - Weather App/drizzle.png";
                 } else if (data.weather[0].main == "Clouds") {
-                    weatherIcon.src = "images/clouds.png";
+                    weatherIcon.src = "/Project17 - Weather App/clouds.png";
                 }
 
                 document.querySelector(".weather").style.display = "block";
